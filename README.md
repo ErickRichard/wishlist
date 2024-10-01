@@ -11,17 +11,17 @@ MongoDB Compass
 Java 17
 Maven
 
-2. Instalar Dependências
+<h2 class="w3-text-green w3-xxlarge">2. Instalar Dependências</h2>
 Utilize o Maven para fazer o build e instalar as dependências do projeto:
 
 mvn clean install
 
-3. Executar o Docker Compose
+<h2 class="w3-text-green w3-xxlarge">3. Executar o Docker Compose</h2>
 Na raiz do projeto, execute o comando abaixo para subir os containers Docker:
 
 docker-compose up --build
 
-4. Documentação da API
+<h2 class="w3-text-green w3-xxlarge">4. Documentação da API</h2>
 A documentação completa dos endpoints está disponível através do Swagger UI. Após subir o projeto, acesse a URL abaixo:
 
 http://localhost:8080/swagger-ui/index.html
