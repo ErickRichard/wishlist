@@ -46,10 +46,24 @@ Após executar o Docker e garantir que o MongoDB está em execução, siga os pa
 <li>No campo "Name", insira um nome para a conexão, como development (ou qualquer outro nome de sua preferência).</li>
 </ul>
 
+<h2 class="w3-text-green w3-xxlarge">6. Documentação da API</h2>
+<p>A documentação completa dos endpoints está disponível através do Swagger UI. Após subir o projeto, acesse a URL abaixo:</p>
+<p><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a></p>
+
+<h3 class="w3-text-green">Autenticação JWT</h3>
+<p>Para gerar um token JWT para autenticar a aplicação, utilize o seguinte comando <code>curl</code>:</p>
+
+<pre><code>curl --request POST \
+  --url http://localhost:8080/auth/v1/token-jwt \
+  --data '{
+	"email": "teste@wishlist.com.br",
+	"password": "123456"
+}'</code></pre>
+
+<p>O usuário <strong>teste@wishlist.com.br</strong> está sendo utilizado para fazer o cadastro. Ao rodar o projeto, serão criados outros três usuários, cada um com uma quantidade de itens maior que 20, para testar a exceção de quantidade.</p>
 
 
-
-<h2 class="w3-text-green w3-xxlarge">5. Documentação da API</h2>
+<h2 class="w3-text-green w3-xxlarge">6. Documentação da API</h2>
 A documentação completa dos endpoints está disponível através do Swagger UI. Após subir o projeto, acesse a URL abaixo:
 
 http://localhost:8080/swagger-ui/index.html
