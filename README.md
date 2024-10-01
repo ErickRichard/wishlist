@@ -39,3 +39,14 @@ A documentação completa dos endpoints está disponível através do Swagger UI
 
 http://localhost:8080/swagger-ui/index.html
 </div>
+
+
+
+<ul>
+  <li>Clone o projeto para a sua máquina local.</li>
+  <li>Execute o comando <pre style="display: inline-block; background-color: #f3f3f3; padding: 2px 5px; border-radius: 3px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; width: auto; white-space: pre-wrap; margin: 0;"><code>mvn clean install</code></pre> para construir o projeto.</li>
+  <li>Na pasta onde o projeto foi clonado, execute o comando <pre style="display: inline-block; background-color: #f3f3f3; padding: 2px 5px; border-radius: 3px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; width: auto; white-space: pre-wrap; margin: 0;"><code>docker-compose up --build</code></pre> para rodar os containers com Docker.</li>
+  <li>Execute o MongoDB Compass, clique em "Add New Connection" e coloque um nome para sua conexão, ex: <b>development</b>. Configure a conexão conforme necessário.</li>
+  <li>Os documentos serão criados automaticamente, pois o projeto está usando <b>Mongock</b>.</li>
+  <li>A documentação Swagger para os endpoints estará disponível em: <a href="http://localhost:8080/swagger-ui/index.html#">http://localhost:8080/swagger-ui/index.html#/</a></li>
+</ul>
