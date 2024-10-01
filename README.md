@@ -15,7 +15,7 @@ Antes de rodar o projeto, você precisará garantir que possui as seguintes ferr
 <h2 class="w3-text-green w3-xxlarge">2. Instalar Dependências</h2>
 Utilize o Maven para fazer o build e instalar as dependências do projeto:
 
-<div style="text-align: left;">
+
 <pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap; margin-left: 0; width: fit-content; height: auto; overflow: auto;">
     <code>mvn clean install</code>
   </pre>
@@ -31,7 +31,7 @@ Na raiz do projeto, execute o comando abaixo para subir os containers Docker:
     docker-compose up --build
 </code>
 </pre>
-</div>
+
 
 
 <h2 class="w3-text-green w3-xxlarge">4. Documentação da API</h2>
