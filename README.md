@@ -1,7 +1,7 @@
-<h1 align="center">Wishlist</h1>
+<h1 align="left">Wishlist</h1>
 Este é um projeto Spring Boot que utiliza Docker e MongoDB como banco de dados, com integração de relatórios de cobertura de código usando JacocoReport. O projeto automatiza a criação do banco de dados e documentos utilizando Mongock, e oferece uma documentação de API acessível através do Swagger UI.
 
-1. Pré-requisitos
+<h2 class="w3-text-green w3-xxlarge"> 1. Pré-requisitos </h2>
 Antes de rodar o projeto, você precisará garantir que possui as seguintes ferramentas instaladas:
 
 Docker Desktop
