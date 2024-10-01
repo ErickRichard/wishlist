@@ -20,6 +20,18 @@ mvn clean install
 <h2 class="w3-text-green w3-xxlarge">3. Executar o Docker Compose</h2>
 Na raiz do projeto, execute o comando abaixo para subir os containers Docker:
 
+
+<pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap;">
+<code>
+    // Exemplo de código em Java
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+</code>
+</pre>
+
 docker-compose up --build
 
 <h2 class="w3-text-green w3-xxlarge">4. Documentação da API</h2>
