@@ -34,7 +34,22 @@ Na raiz do projeto, execute o comando abaixo para subir os containers Docker:
 
 
 
-<h2 class="w3-text-green w3-xxlarge">4. Documentação da API</h2>
+
+<h2 class="w3-text-green w3-xxlarge">4. Configurar o MongoDB Compass</h2>
+
+Após executar o Docker e garantir que o MongoDB está em execução, siga os passos abaixo para configurar o MongoDB Compass:
+  
+</ul>
+<li>Abra o MongoDB Compass.</li>
+<li>Clique no botão "Add New Connection".</li>
+<li>Na janela de conexão, insira o URI da conexão MongoDB, por exemplo: mongodb://sa:12345@localhost:27017/.</li>
+<li>No campo "Name", insira um nome para a conexão, como development (ou qualquer outro nome de sua preferência).</li>
+</ul>
+
+
+
+
+<h2 class="w3-text-green w3-xxlarge">5. Documentação da API</h2>
 A documentação completa dos endpoints está disponível através do Swagger UI. Após subir o projeto, acesse a URL abaixo:
 
 http://localhost:8080/swagger-ui/index.html
