@@ -17,7 +17,7 @@ Utilize o Maven para fazer o build e instalar as dependências do projeto:
 
 
 
-<pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap;">
+<pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap; margin-left: 0; width: fit-content; height: auto; overflow: auto;">
 <code>
     mvn clean install
 </code>
@@ -27,7 +27,7 @@ Utilize o Maven para fazer o build e instalar as dependências do projeto:
 Na raiz do projeto, execute o comando abaixo para subir os containers Docker:
 
 
-<pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap;">
+<pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap; margin-left: 0; width: fit-content; height: auto; overflow: auto;">
 <code>
     docker-compose up --build
 </code>
