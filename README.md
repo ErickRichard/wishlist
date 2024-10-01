@@ -6,7 +6,7 @@ Este é um projeto Spring Boot que utiliza Docker e MongoDB como banco de dados,
 <h2 class="w3-text-green w3-xxlarge"> 1. Pré-requisitos </h2>
 Antes de rodar o projeto, você precisará garantir que possui as seguintes ferramentas instaladas:
 <ul>
-<li>Docker Desktop</li>
+<li>Docker Desktop, os testes foram feitos na versão 4.9.1</li>
 <li>MongoDB Compass</li>
 <li>Java 17</li>
 <li>Maven</li>
