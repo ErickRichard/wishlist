@@ -1,0 +1,20 @@
+security:
+  jwt:
+    expiration-time: 1800000
+    secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+server:
+  port: 8080
+spring:
+  api-docs:
+    path: /v3/api-docs
+    swagger-ui:
+      path: /swagger-ui.html
+  application:
+    name: wishlist
+  data:
+    mongodb:
+      #uri: mongodb://sa:12345@localhost:27017/
+      uri: mongodb://sa:12345@mongodb:27017/
+      database: wishlist
+mongock:
+  change-logs-scan-package: br.com.personal.wishlist.configuration
