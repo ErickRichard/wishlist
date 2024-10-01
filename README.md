@@ -5,18 +5,12 @@ Este é um projeto Spring Boot que utiliza Docker e MongoDB como banco de dados,
 
 <h2 class="w3-text-green w3-xxlarge"> 1. Pré-requisitos </h2>
 Antes de rodar o projeto, você precisará garantir que possui as seguintes ferramentas instaladas:
-
-Docker Desktop
-MongoDB Compass
-Java 17
-Maven
-
 <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-    </ul>
+<li>Docker Desktop</li>
+<li>MongoDB Compass</li>
+<li>Java 17</li>
+<li>Maven</li>
+</ul>
 
 <h2 class="w3-text-green w3-xxlarge">2. Instalar Dependências</h2>
 Utilize o Maven para fazer o build e instalar as dependências do projeto:
