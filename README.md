@@ -16,7 +16,7 @@ Antes de rodar o projeto, você precisará garantir que possui as seguintes ferr
 Utilize o Maven para fazer o build e instalar as dependências do projeto:
 
 <div style="text-align: left;">
-  <pre style="display: inline-block; background-color: #f3f3f3; padding: 2px 5px; border-radius: 3px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; width: auto; white-space: pre-wrap; margin: 0;">
+<pre style="background-color: #f3f3f3; padding: 10px; border-radius: 5px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; white-space: pre-wrap; margin-left: 0; width: fit-content; height: auto; overflow: auto;">
     <code>mvn clean install</code>
   </pre>
 
