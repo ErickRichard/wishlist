@@ -19,7 +19,7 @@ Utilize o Maven para fazer o build e instalar as dependências do projeto:
   <pre style="display: inline-block; background-color: #f3f3f3; padding: 2px 5px; border-radius: 3px; border: 1px solid #d1d1d1; font-family: 'Courier New', Courier, monospace; width: auto; white-space: pre-wrap; margin: 0;">
     <code>mvn clean install</code>
   </pre>
-</div>
+
 
 
 <h2 class="w3-text-green w3-xxlarge">3. Executar o Docker Compose</h2>
@@ -31,7 +31,7 @@ Na raiz do projeto, execute o comando abaixo para subir os containers Docker:
     docker-compose up --build
 </code>
 </pre>
-
+</div>
 
 
 <h2 class="w3-text-green w3-xxlarge">4. Documentação da API</h2>
