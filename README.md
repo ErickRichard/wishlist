@@ -11,6 +11,13 @@ MongoDB Compass
 Java 17
 Maven
 
+<ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
 <h2 class="w3-text-green w3-xxlarge">2. Instalar Dependências</h2>
 Utilize o Maven para fazer o build e instalar as dependências do projeto:
 
