@@ -4,6 +4,7 @@ import br.com.personal.wishlist.application.dto.request.ProductRequest;
 import br.com.personal.wishlist.application.dto.request.TokenRequest;
 import br.com.personal.wishlist.application.dto.request.WishlistRequest;
 import br.com.personal.wishlist.application.dto.response.ProductResponse;
+import br.com.personal.wishlist.application.dto.response.TokenResponse;
 import br.com.personal.wishlist.application.dto.response.WishlistResponse;
 import br.com.personal.wishlist.domain.model.Product;
 import br.com.personal.wishlist.domain.model.User;
@@ -117,6 +118,13 @@ public class Mocks {
         return TokenRequest.builder()
                 .email("user@example.com")
                 .password("password")
+                .build();
+    }
+
+    public static TokenResponse createTokenResponse(){
+        return TokenResponse.builder()
+                .token("validToken")
+                .expire(3600000L)
                 .build();
     }
 }
