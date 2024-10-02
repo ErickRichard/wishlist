@@ -1,18 +1,18 @@
 package br.com.personal.wishlist.tests.mapper;
 
-import br.com.personal.wishlist.application.dto.request.ProductRequest;
 import br.com.personal.wishlist.application.dto.request.WishlistRequest;
 import br.com.personal.wishlist.application.dto.response.WishlistResponse;
 import br.com.personal.wishlist.domain.mapper.WishlistMapper;
 import br.com.personal.wishlist.domain.model.Product;
 import br.com.personal.wishlist.domain.model.Wishlist;
+import br.com.personal.wishlist.tests.mock.Mocks;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mapstruct.factory.Mappers;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,18 +21,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class WishlistMapperTest {
     private final WishlistMapper wishlistMapper = Mappers.getMapper(WishlistMapper.class);
 
+    private Product product;
+    private List<Product> products;
+    private Wishlist wishlist;
+    private WishlistRequest wishlistRequest;
+
+    @BeforeEach
+    void setUp() {
+        product = Mocks.createDistinctProduct();
+        products = List.of(Mocks.createDistinctProduct());
+        wishlist = Mocks.createWishlist();
+        wishlistRequest = Mocks.createWishlistRequest();
+    }
+
     @Test
     void testToEntity() {
-        WishlistRequest wishlistRequest = WishlistRequest.builder()
-                .userId("user1")
-                .productRequestList(List.of(
-                        ProductRequest.builder()
-                                .id("product1")
-                                .name("Product Name")
-                                .build()))
-                .build();
-        Product product = new Product("product1", "Product Name", "Product Description", new BigDecimal("19.99"), 5);
-        List<Product> products = Collections.singletonList(product);
         Wishlist wishlist = wishlistMapper.toEntity(wishlistRequest, products);
         assertEquals(wishlistRequest.getUserId(), wishlist.getUserId());
         assertEquals(products, wishlist.getProducts());
@@ -40,11 +43,10 @@ class WishlistMapperTest {
 
     @Test
     void testToResponse() {
-        Product product = new Product("product1", "Product Name", "Product Description", new BigDecimal("19.99"), 5);
-        Wishlist wishlist = Wishlist.builder()
+        var wishlist = Wishlist.builder()
                 .id("wishlist1")
                 .userId("user1")
-                .products(Collections.singletonList(product))
+                .products(List.of(Mocks.createProduct("product1", "Product Name", "Product Description", new BigDecimal("19.99"), 5)))
                 .build();
         WishlistResponse wishlistResponse = wishlistMapper.toResponse(wishlist);
         assertEquals(wishlist.getId(), wishlistResponse.getId());
@@ -54,17 +56,13 @@ class WishlistMapperTest {
 
     @Test
     void testUpdateEntity() {
-        Product existingProduct = new Product("product1", "Product Name", "Product Description", new BigDecimal("19.99"), 5);
-        Wishlist wishlist = Wishlist.builder()
+        wishlistMapper.updateEntity(Wishlist.builder()
                 .id("wishlist1")
                 .userId("user1")
-                .products(Collections.singletonList(existingProduct))
-                .build();
-        Product newProduct = new Product("product2", "New Product", "New Product Description", new BigDecimal("29.99"), 3);
-        List<Product> newProducts = Collections.singletonList(newProduct);
-        wishlistMapper.updateEntity(wishlist, newProducts);
-        assertEquals(2, wishlist.getProducts().size());
-        assertEquals("product1", wishlist.getProducts().get(1).getId());
-        assertEquals("product2", wishlist.getProducts().get(0).getId());
+                .products(List.of(product))
+                .build(), List.of(Mocks.createProduct("product2", "New Product", "New Product Description", new BigDecimal("29.99"), 3)));
+        assertEquals(3, wishlist.getProducts().size());
+        assertEquals("prod2", wishlist.getProducts().get(1).getId());
+        assertEquals("prod1", wishlist.getProducts().get(0).getId());
     }
 }

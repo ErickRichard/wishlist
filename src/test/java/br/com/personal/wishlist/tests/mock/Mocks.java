@@ -52,7 +52,7 @@ public class Mocks {
 
     public static Wishlist createWishlist() {
         return Wishlist.builder()
-                .id("1")
+                .id("wishlist123")
                 .userId("1")
                 .products(createListOfProducts())
                 .build();
@@ -91,6 +91,13 @@ public class Mocks {
                 .build();
     }
 
+    public static ProductRequest createProductRequest() {
+        return ProductRequest.builder()
+                .id("product1")
+                .name("Product Name")
+                .build();
+    }
+
     public static User createUser() {
         User user = new User();
         user.setEmail("test@example.com");
@@ -121,7 +128,7 @@ public class Mocks {
                 .build();
     }
 
-    public static TokenResponse createTokenResponse(){
+    public static TokenResponse createTokenResponse() {
         return TokenResponse.builder()
                 .token("validToken")
                 .expire(3600000L)
