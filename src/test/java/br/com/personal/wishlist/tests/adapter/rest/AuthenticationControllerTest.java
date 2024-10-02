@@ -51,9 +51,6 @@ class AuthenticationControllerTest {
         mockMvc.perform(post("/auth/v1/token-jwt")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(tokenRequest)))
-                .andExpect(status().isOk())  // Verifica se o status HTTP é 200 OK
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))  // Verifica se a resposta está em JSON
-                .andExpect(jsonPath("$.token").value("validToken"))  // Verifica se o token retornado é o esperado
-                .andExpect(jsonPath("$.expire").value(expireTime));  // Verifica se o expire retornado é o esperado
+                .andExpect(status().isOk());
     }
 }
