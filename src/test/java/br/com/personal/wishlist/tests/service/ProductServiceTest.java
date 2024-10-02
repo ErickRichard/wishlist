@@ -87,8 +87,8 @@ class ProductServiceTest {
 
     static Stream<Arguments> productDataProvider() {
         return Stream.of(
-                Arguments.of("product123", true), // Caso onde o produto existe
-                Arguments.of("unknownProduct", false) // Caso onde o produto não existe
+                Arguments.of("product123", true),
+                Arguments.of("unknownProduct", false)
         );
     }
 }
