@@ -39,7 +39,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain) throws ServletException, IOException {
         final String authHeader = request.getHeader("Authorization");
         try {
-            if (request.getRequestURI().contains("/auth/v1/") || containsSwaggerPath(request.getRequestURI())) {
+            if (request.getRequestURI().contains("/auth/v1/") || Boolean.TRUE.equals(containsSwaggerPath(request.getRequestURI()))) {
                 filterChain.doFilter(request, response);
                 return;
             }
